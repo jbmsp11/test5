@@ -8,7 +8,7 @@ pipeline {
         }
         stage("Clone Repo"){
             steps {
-                sh "git clone "
+                sh "git clone https://github.com/jbmsp11/test5.git "
             }
         }
         stage("Test"){
