@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+    stages {
+        stage("Clean Up") {
+            steps {
+                deleteDir()
+            }
+        }
+        stage("Clone Repo"){
+            steps {
+                sh "git clone "
+            }
+        }
+        stage("Test"){
+            steps{
+                dir("test3") {
+                    sh "python main.py"
+            }
+        }
+    }
+}
+}
